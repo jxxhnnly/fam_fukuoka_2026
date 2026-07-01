@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>후쿠오카 가족여행 · ICN-FUK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#eaf3fc;
@@ -27,12 +27,12 @@
       radial-gradient(ellipse at 100% 0%, rgba(219,235,250,0.9), transparent 45%),
       var(--bg);
     color:var(--ink);
-    font-family:'Noto Sans KR', sans-serif;
+    font-family:-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
     min-height:100vh;
     padding-bottom:80px;
   }
   .mono{font-family:'JetBrains Mono', monospace;}
-  .disp{font-family:'Shippori Mincho', serif;}
+  .disp{font-family:'Jua', sans-serif;}
 
   /* ===== HERO / BOARDING PASS ===== */
   .hero{
@@ -50,7 +50,7 @@
     font-weight:700;
   }
   .hero h1{
-    font-family:'Shippori Mincho', serif;
+    font-family:'Jua', sans-serif;
     font-weight:800;
     font-size:clamp(34px, 7vw, 58px);
     line-height:1.2;
@@ -150,7 +150,7 @@
     opacity:0.85;
   }
   .ticket-stub .stub-days{
-    font-family:'Shippori Mincho', serif;
+    font-family:'Jua', sans-serif;
     font-size:28px;
     font-weight:700;
   }
@@ -200,7 +200,7 @@
 
   /* ===== PREP CHECKLIST ===== */
   .prep-title{
-    font-family:'Shippori Mincho', serif;
+    font-family:'Jua', sans-serif;
     font-size:22px;
     font-weight:700;
     margin-bottom:6px;
@@ -281,7 +281,7 @@
     margin-bottom:28px;
   }
   .day-head h2{
-    font-family:'Shippori Mincho', serif;
+    font-family:'Jua', sans-serif;
     font-size:24px;
     font-weight:700;
   }
@@ -293,12 +293,12 @@
 
   .timeline{
     position:relative;
-    padding-left:78px;
+    padding-left:94px;
   }
   .timeline::before{
     content:'';
     position:absolute;
-    left:56px;
+    left:66px;
     top:6px; bottom:6px;
     width:1px;
     background:var(--line);
@@ -310,9 +310,9 @@
   .stop:last-child{padding-bottom:4px;}
   .stop-time{
     position:absolute;
-    left:-78px;
+    left:-94px;
     top:2px;
-    width:64px;
+    width:50px;
     text-align:right;
     font-family:'JetBrains Mono', monospace;
     font-size:13px;
@@ -321,7 +321,7 @@
   }
   .stop-dot{
     position:absolute;
-    left:-25px;
+    left:-29px;
     top:6px;
     width:9px; height:9px;
     border-radius:50%;
@@ -422,9 +422,9 @@
   @media (max-width:560px){
     .ticket-inner{flex-direction:column;}
     .ticket-stub{width:100%; flex-direction:row; padding:10px; border-left:none; border-top:2px dashed rgba(255,255,255,0.45);}
-    .timeline{padding-left:60px;}
-    .stop-time{left:-60px; width:46px; font-size:11.5px;}
-    .stop-dot{left:-19px;}
+    .timeline{padding-left:76px;}
+    .stop-time{left:-76px; width:38px; font-size:11px;}
+    .stop-dot{left:-24px;}
   }
 
   :focus-visible{outline:2px solid var(--blue-deep); outline-offset:2px;}
