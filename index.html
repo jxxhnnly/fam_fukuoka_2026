@@ -408,6 +408,44 @@
     display:block;
   }
 
+  .route-card{
+    background:linear-gradient(135deg, #ffffff, #f2f8ff);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px 18px 18px;
+    margin-bottom:28px;
+    box-shadow:0 10px 24px -16px rgba(36,66,95,0.3);
+  }
+  .route-card .route-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:12px;
+  }
+  .route-card .route-title{
+    font-family:'Jua', sans-serif;
+    font-size:16px;
+    color:var(--ink);
+  }
+  .route-card .route-title span{color:var(--blue-deep);}
+  .route-map{
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    height:280px;
+  }
+  .route-map iframe{width:100%; height:100%; border:0; display:block;}
+  .route-legend{
+    margin-top:10px;
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.7;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .route-legend b{color:var(--blue-deep);}
+
   footer{
     max-width:920px;
     margin:60px auto 0;
@@ -485,8 +523,8 @@
 <div class="tabs-wrap">
   <div class="tab-row">
     <label for="t-prep"><span class="n">00</span>여행 준비</label>
-    <label for="t-1"><span class="n">01</span>1일차 · 후쿠오카</label>
-    <label for="t-2"><span class="n">02</span>2일차 · 유후인·벳부</label>
+    <label for="t-1"><span class="n">01</span>1일차 · 모모치·타워</label>
+    <label for="t-2"><span class="n">02</span>2일차 · 오호리·모모치</label>
     <label for="t-3"><span class="n">03</span>3일차 · 귀국</label>
   </div>
 </div>
@@ -526,9 +564,23 @@
   <!-- DAY 1 -->
   <div class="panel panel-1">
     <div class="day-head">
-      <h2>1일차 — 후쿠오카 시내</h2>
-      <div class="day-desc">인천 출발 → 후쿠오카 도심 → 타워 야경</div>
+      <h2>1일차 — 모모치 해변과 후쿠오카 타워</h2>
+      <div class="day-desc">인천 출발 → 하카타 시내 → 나카스 야경</div>
     </div>
+
+    <div class="route-card">
+      <div class="route-head">
+        <div class="route-title">오늘의 동선 <span>· 주주 → 이치란 → 규마루 → 헤노지</span></div>
+        <a class="btn-link" href="https://www.google.com/maps/dir/?api=1&origin=33.593671,130.405587&destination=33.594231,130.4119276&waypoints=33.5932405,130.4045974|33.5884826,130.393758&travelmode=walking" target="_blank" rel="noopener">🧭 길찾기 앱에서 열기</a>
+      </div>
+      <div class="route-map">
+        <iframe loading="lazy" src="https://www.google.com/maps?saddr=33.593671,130.405587&daddr=33.5932405,130.4045974+to:33.5884826,130.393758+to:33.594231,130.4119276&output=embed"></iframe>
+      </div>
+      <div class="route-legend">
+        <b>①</b> 카페테라스 주주 → <b>②</b> 이치란 라멘 본점 → <b>③</b> 규마루(저녁) → <b>④</b> 이자카야 헤노지
+      </div>
+    </div>
+
     <div class="timeline">
 
       <div class="stop">
@@ -543,7 +595,6 @@
         <div class="stop-time">04:42</div><div class="stop-dot"></div>
         <div class="stop-card">
           <div class="title">인천공항 도착<span class="badge">제2터미널 T2</span></div>
-          <div class="desc">탑승 게이트·체크인 카운터 위치 미리 확인해두기</div>
         </div>
       </div>
       <div class="stop">
@@ -552,13 +603,14 @@
       </div>
       <div class="stop">
         <div class="stop-time">09:00</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">후쿠오카 공항 도착</div></div>
+        <div class="stop-card"><div class="title">후쿠오카 도착</div></div>
       </div>
       <div class="stop">
         <div class="stop-time">09:30</div><div class="stop-dot"></div>
         <div class="stop-card">
           <div class="title">파스모 충전 · 현금 소액 인출</div>
-          <div class="desc">공항 내 ATM / 파스모 창구 이용</div>
+          <div class="desc">신선샌드, 이몬네(찹쌀떡 아이스크림) 둘러보기</div>
+          <div class="note">😋 너무 맛있으면 2일차에 또 먹기</div>
         </div>
       </div>
       <div class="stop">
@@ -569,7 +621,6 @@
         <div class="stop-time">10:30</div><div class="stop-dot"></div>
         <div class="stop-card">
           <div class="title">카페테라스 주주</div>
-          <div class="desc">아침 겸 브런치 카페</div>
           <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.593671,130.405587&hl=ko&z=17&output=embed"></iframe></div>
           <div class="stop-actions">
             <a class="btn-link" href="https://www.google.com/maps/place/%EC%B9%B4%ED%8E%98%ED%85%8C%EB%9D%BC%EC%8A%A4+%EC%A3%BC%EC%A3%BC/@33.593671,130.405587,17z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
@@ -580,8 +631,7 @@
       <div class="stop">
         <div class="stop-time">11:30</div><div class="stop-dot"></div>
         <div class="stop-card">
-          <div class="title">이치란 본사 총본점</div>
-          <div class="desc">점심 — 돈코츠 라멘</div>
+          <div class="title">점심 — 이치란 라멘 본점</div>
           <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5932405,130.4045974&hl=ko&z=17&output=embed"></iframe></div>
           <div class="stop-actions">
             <a class="btn-link" href="https://www.google.com/maps/place/%EC%9D%B4%EC%B9%98%EB%9E%80+%EB%B3%B8%EC%82%AC+%EC%B4%9D%EB%B3%B8%EC%A0%90/@33.5932405,130.4045974,17z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
@@ -590,16 +640,117 @@
         </div>
       </div>
       <div class="stop">
-        <div class="stop-time">13:30</div><div class="stop-dot"></div>
+        <div class="stop-time">13:00</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">돈키호테 구경</div></div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">14:00</div><div class="stop-dot"></div>
         <div class="stop-card">
-          <div class="title">캐널시티 이동 · 분수쇼 관람</div>
+          <div class="title">로피아 마트 — 스시 사서 먹기</div>
         </div>
       </div>
       <div class="stop">
-        <div class="stop-time">14:30</div><div class="stop-dot"></div>
+        <div class="stop-time">15:00</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">체크인 후 휴식</div></div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">FREE</div><div class="stop-dot"></div>
         <div class="stop-card">
-          <div class="title">스타벅스 오호리 공원점</div>
-          <div class="desc">공원 뷰 카페</div>
+          <div class="title">쯍쟌 자유시간 / 엄빠 휴식시간</div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">18:00</div><div class="stop-dot"></div>
+        <div class="stop-card">
+          <div class="title">나카스 리버 크루즈</div>
+          <div class="note">🎫 트립닷컴 예약</div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">18:30</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">캐널시티 분수쇼 감상</div></div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">19:30</div><div class="stop-dot"></div>
+        <div class="stop-card">
+          <div class="title">저녁 — 규마루 함박스테이크</div>
+          <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5884826,130.393758&hl=ko&z=17&output=embed"></iframe></div>
+          <div class="stop-actions">
+            <a class="btn-link" href="https://www.google.com/maps/place/%EA%B7%9C%EB%A7%88%EB%A3%A8/@33.5884826,130.393758,17z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
+            <a class="btn-link star" href="https://www.google.com/maps/place/%EA%B7%9C%EB%A7%88%EB%A3%A8/@33.5884826,130.393758,17z" target="_blank" rel="noopener">★ 평점·리뷰 보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">21:30</div><div class="stop-dot"></div>
+        <div class="stop-card">
+          <div class="title">이자카야 헤노지</div>
+          <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.594231,130.4119276&hl=ko&z=17&output=embed"></iframe></div>
+          <div class="stop-actions">
+            <a class="btn-link" href="https://www.google.com/maps/place/Henoji/@33.594231,130.4119276,17z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
+            <a class="btn-link star" href="https://www.google.com/maps/place/Henoji/@33.594231,130.4119276,17z" target="_blank" rel="noopener">★ 평점·리뷰 보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">23:00</div><div class="stop-dot"></div>
+        <div class="stop-card">
+          <div class="title">편의점 털었다가 맛난거 먹고 푹 자기</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="panel panel-2">
+    <div class="day-head">
+      <h2>2일차 — 오호리 공원과 모모치 해변</h2>
+      <div class="day-desc">장어덮밥 → 공원 산책 → 해변 → 타워 야경</div>
+    </div>
+
+    <div class="route-card">
+      <div class="route-head">
+        <div class="route-title">오늘의 동선 <span>· 장어덮밥 → 오호리 → 우동 → 모모치 → 타워</span></div>
+        <a class="btn-link" href="https://www.google.com/maps/dir/?api=1&origin=33.5937636,130.4066303&destination=33.5932846,130.35151&waypoints=33.5868433,130.3781996|33.5894176,130.3689385|33.5886032,130.3556438|33.5934145,130.3511085&travelmode=walking" target="_blank" rel="noopener">🧭 길찾기 앱에서 열기</a>
+      </div>
+      <div class="route-map">
+        <iframe loading="lazy" src="https://www.google.com/maps?saddr=33.5937636,130.4066303&daddr=33.5868433,130.3781996+to:33.5894176,130.3689385+to:33.5886032,130.3556438+to:33.5934145,130.3511085+to:33.5932846,130.35151&output=embed"></iframe>
+      </div>
+      <div class="route-legend">
+        <b>①</b> 쿄카라우나기 나카스 → <b>②</b> 오호리공원 스타벅스 → <b>③</b> 템푸라 우동 → <b>④</b> 모모치 해변 카페 → <b>⑤</b> 모모치 디저트 → <b>⑥</b> 후쿠오카 타워
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="stop">
+        <div class="stop-time">09:00</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">기상 후 아침 식사</div></div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">10:00</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">준비 완료 후 출발</div></div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">10:30</div><div class="stop-dot"></div>
+        <div class="stop-card">
+          <div class="title">쿄카라우나기 나카스 — 장어덮밥</div>
+          <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5937636,130.4066303&hl=ko&z=17&output=embed"></iframe></div>
+          <div class="stop-actions">
+            <a class="btn-link" href="https://www.google.com/maps/place/%EC%BF%84%EC%B9%B4%EB%9D%BC%EC%9A%B0%EB%82%98%EA%B8%B0+%EB%82%98%EC%B9%B4%EC%8A%A4/@33.5937636,130.4066303,17z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
+            <a class="btn-link star" href="https://www.google.com/maps/place/%EC%BF%84%EC%B9%B4%EB%9D%BC%EC%9A%B0%EB%82%98%EA%B8%B0+%EB%82%98%EC%B9%B4%EC%8A%A4/@33.5937636,130.4066303,17z" target="_blank" rel="noopener">★ 평점·리뷰 보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">12:00</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">하카타역 구경</div></div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">14:00</div><div class="stop-dot"></div>
+        <div class="stop-card">
+          <div class="title">오호리 공원 스타벅스</div>
           <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5868433,130.3781996&hl=ko&z=17&output=embed"></iframe></div>
           <div class="stop-actions">
             <a class="btn-link" href="https://www.google.com/maps/place/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4+%EC%98%A4%ED%98%B8%EB%A6%AC+%EA%B3%B5%EC%9B%90%EC%A0%90/@33.5868433,130.3781996,17z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
@@ -608,30 +759,34 @@
         </div>
       </div>
       <div class="stop">
-        <div class="stop-time">16:30</div><div class="stop-dot"></div>
+        <div class="stop-time">15:30</div><div class="stop-dot"></div>
         <div class="stop-card">
-          <div class="title">오호리 공원 산책</div>
-          <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5862065,130.3764646&hl=ko&z=16&output=embed"></iframe></div>
+          <div class="title">점심 — 텐푸라 우동</div>
+          <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5894176,130.3689385&hl=ko&z=17&output=embed"></iframe></div>
           <div class="stop-actions">
-            <a class="btn-link" href="https://www.google.com/maps/place/%EC%98%A4%ED%98%B8%EB%A6%AC+%EA%B3%B5%EC%9B%90/@33.5862065,130.3764646,16z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
-            <a class="btn-link star" href="https://www.google.com/maps/place/%EC%98%A4%ED%98%B8%EB%A6%AC+%EA%B3%B5%EC%9B%90/@33.5862065,130.3764646,16z" target="_blank" rel="noopener">★ 평점·리뷰 보기</a>
+            <a class="btn-link" href="https://www.google.com/maps/place/Tempura+Udon/@33.5894176,130.3689385,17z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
+            <a class="btn-link star" href="https://www.google.com/maps/place/Tempura+Udon/@33.5894176,130.3689385,17z" target="_blank" rel="noopener">★ 평점·리뷰 보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">16:30</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">오호리 공원 산책</div></div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">17:00</div><div class="stop-dot"></div>
+        <div class="stop-card">
+          <div class="title">모모치 해변으로 이동</div>
+          <div class="desc">fruits closet cafe · 키타키츠네노 다이코부츠(디저트)</div>
+          <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5886032,130.3556438&hl=ko&z=15&output=embed"></iframe></div>
+          <div class="stop-actions">
+            <a class="btn-link" href="https://www.google.com/maps/place/fruits+closet+cafe/@33.5886032,130.3556438,16z" target="_blank" rel="noopener">🗺 카페 지도</a>
+            <a class="btn-link" href="https://www.google.com/maps/place/%ED%82%A4%ED%83%80%ED%82%A4%EC%B8%A0%EB%84%A4%EB%85%B8+%EB%8B%A4%EC%9D%B4%EC%BD%94%EB%B6%80%EC%B8%A0/@33.5934145,130.3511085,16z" target="_blank" rel="noopener">🗺 디저트 지도</a>
           </div>
         </div>
       </div>
       <div class="stop">
         <div class="stop-time">18:00</div><div class="stop-dot"></div>
-        <div class="stop-card">
-          <div class="title">KAMAKATSU</div>
-          <div class="desc">저녁 식사</div>
-          <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5818024,130.3672179&hl=ko&z=17&output=embed"></iframe></div>
-          <div class="stop-actions">
-            <a class="btn-link" href="https://www.google.com/maps/place/KAMAKATSU/@33.5818024,130.3672179,17z" target="_blank" rel="noopener">🗺 지도에서 열기</a>
-            <a class="btn-link star" href="https://www.google.com/maps/place/KAMAKATSU/@33.5818024,130.3672179,17z" target="_blank" rel="noopener">★ 평점·리뷰 보기</a>
-          </div>
-        </div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">20:00</div><div class="stop-dot"></div>
         <div class="stop-card">
           <div class="title">후쿠오카 타워 관광</div>
           <div class="map-embed"><iframe loading="lazy" src="https://www.google.com/maps?q=33.5932846,130.35151&hl=ko&z=16&output=embed"></iframe></div>
@@ -642,79 +797,6 @@
         </div>
       </div>
       <div class="stop">
-        <div class="stop-time">22:00</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">돈키호테 구경</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">23:30</div><div class="stop-dot"></div>
-        <div class="stop-card">
-          <div class="title">숙소 도착 · 대욕장 · 취침</div>
-          <div class="desc">하루 마무리, 푹 자기</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- DAY 2 -->
-  <div class="panel panel-2">
-    <div class="day-head">
-      <h2>2일차 — 유후인 · 벳부</h2>
-      <div class="day-desc">버스 투어 자유관광 → 하카타 밤 일정</div>
-    </div>
-    <div class="timeline">
-
-      <div class="stop">
-        <div class="stop-time">07:20</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">준비 완료 후 출발</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">07:45</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">버스 탑승</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">09:40</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">유후다케</div><div class="desc">차창관광</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">10:05</div><div class="stop-dot"></div>
-        <div class="stop-card">
-          <div class="title">유후인 자유관광</div>
-          <div class="desc">~14:05 · 중식은 장어덮밥, 이후 카페</div>
-        </div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">14:25</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">벳부 유노하나</div><div class="desc">30분 자유관광</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">15:05</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">벳부 가마도지옥</div><div class="desc">30분 자유관광</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">16:05</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">유후인 세이키치차야 앞 미팅</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">16:10</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">버스 출발</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">17:50</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">하카타역 하차</div></div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">18:30</div><div class="stop-dot"></div>
-        <div class="stop-card">
-          <div class="title">로피아 마트 — 스시 및 먹을거리 구매</div>
-          <div class="note">💴 현금만 가능</div>
-        </div>
-      </div>
-      <div class="stop">
-        <div class="stop-time">19:00</div><div class="stop-dot"></div>
-        <div class="stop-card"><div class="title">대욕장</div></div>
-      </div>
-      <div class="stop">
         <div class="stop-time">19:50</div><div class="stop-dot"></div>
         <div class="stop-card">
           <div class="title">숙소 근처 오코노미야키</div>
@@ -723,6 +805,10 @@
       </div>
       <div class="stop">
         <div class="stop-time">22:00</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">대욕장 즐기기</div></div>
+      </div>
+      <div class="stop">
+        <div class="stop-time">23:00</div><div class="stop-dot"></div>
         <div class="stop-card"><div class="title">간맥 후 취침</div></div>
       </div>
 
@@ -733,10 +819,14 @@
   <div class="panel panel-3">
     <div class="day-head">
       <h2>3일차 — 귀국</h2>
-      <div class="day-desc">체크아웃 → 공항 → 인천</div>
+      <div class="day-desc">아침밥 → 체크아웃 → 공항 → 인천</div>
     </div>
     <div class="timeline">
 
+      <div class="stop">
+        <div class="stop-time">05:20</div><div class="stop-dot"></div>
+        <div class="stop-card"><div class="title">아침밥 — 요시노야 하카타 기온</div></div>
+      </div>
       <div class="stop">
         <div class="stop-time">06:00</div><div class="stop-dot"></div>
         <div class="stop-card"><div class="title">체크아웃 후 편의점 털이</div></div>
